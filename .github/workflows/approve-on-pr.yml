@@ -8,7 +8,7 @@ jobs:
   auto-approve:
     runs-on: ubuntu-latest
     steps:
-    - uses: dolfinus/auto-approve-action@v2
+    - uses: hmarr/auto-approve-action@v2
       with:
         pull-request-number: 3
         github-token: 
