@@ -9,7 +9,7 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-    - uses: hmarr/auto-approve-action@fix-actions-token-support
+    - uses: hmarr/auto-approve-action@v2
       if: github.actor == 'dependabot[bot]'
       with:
         github-token: "${{ secrets.GITHUB_TOKEN }}"
