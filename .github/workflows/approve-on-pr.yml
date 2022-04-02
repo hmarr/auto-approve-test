@@ -1,13 +1,14 @@
 name: Approve on pull_request
 
 on:
-  pull_request
+  pull_request:
+  issue_comment:
 
 jobs:
   auto-approve:
     runs-on: ubuntu-latest
     steps:
-    - uses: hmarr/auto-approve-action@main
+    - uses: dolfinus/auto-approve-action@v2
       if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
       with:
         github-token: "${{ secrets.GITHUB_TOKEN }}"
