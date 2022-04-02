@@ -10,5 +10,5 @@ jobs:
     steps:
     - uses: dolfinus/auto-approve-action@v2
       with:
-        pull-request-number: 4
+        pull-request-number: 3
         github-token: "${{ secrets.GH_TOKEN }}"
