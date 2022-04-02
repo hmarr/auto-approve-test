@@ -9,6 +9,11 @@ jobs:
     permissions:
       pull-requests: write
     steps:
+
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
+      env:
+        tok: "${{ secrets.GITHUB_TOKEN }}"
     - uses: hmarr/auto-approve-action@v2
       if: github.actor == 'dependabot[bot]'
       with:
